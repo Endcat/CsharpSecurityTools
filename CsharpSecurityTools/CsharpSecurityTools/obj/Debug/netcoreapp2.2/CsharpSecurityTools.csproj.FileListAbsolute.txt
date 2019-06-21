@@ -1,0 +1,11 @@
+C:\Users\Endcat\source\repos\CsharpSecurityTools\CsharpSecurityTools\bin\Debug\netcoreapp2.2\CsharpSecurityTools.deps.json
+C:\Users\Endcat\source\repos\CsharpSecurityTools\CsharpSecurityTools\bin\Debug\netcoreapp2.2\CsharpSecurityTools.runtimeconfig.json
+C:\Users\Endcat\source\repos\CsharpSecurityTools\CsharpSecurityTools\bin\Debug\netcoreapp2.2\CsharpSecurityTools.runtimeconfig.dev.json
+C:\Users\Endcat\source\repos\CsharpSecurityTools\CsharpSecurityTools\bin\Debug\netcoreapp2.2\CsharpSecurityTools.dll
+C:\Users\Endcat\source\repos\CsharpSecurityTools\CsharpSecurityTools\bin\Debug\netcoreapp2.2\CsharpSecurityTools.pdb
+C:\Users\Endcat\source\repos\CsharpSecurityTools\CsharpSecurityTools\obj\Debug\netcoreapp2.2\CsharpSecurityTools.csprojAssemblyReference.cache
+C:\Users\Endcat\source\repos\CsharpSecurityTools\CsharpSecurityTools\obj\Debug\netcoreapp2.2\CsharpSecurityTools.csproj.CoreCompileInputs.cache
+C:\Users\Endcat\source\repos\CsharpSecurityTools\CsharpSecurityTools\obj\Debug\netcoreapp2.2\CsharpSecurityTools.AssemblyInfoInputs.cache
+C:\Users\Endcat\source\repos\CsharpSecurityTools\CsharpSecurityTools\obj\Debug\netcoreapp2.2\CsharpSecurityTools.AssemblyInfo.cs
+C:\Users\Endcat\source\repos\CsharpSecurityTools\CsharpSecurityTools\obj\Debug\netcoreapp2.2\CsharpSecurityTools.dll
+C:\Users\Endcat\source\repos\CsharpSecurityTools\CsharpSecurityTools\obj\Debug\netcoreapp2.2\CsharpSecurityTools.pdb
