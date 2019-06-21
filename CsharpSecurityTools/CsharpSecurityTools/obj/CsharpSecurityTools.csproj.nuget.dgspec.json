@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Endcat\\source\\repos\\CsharpSecurityTools\\CsharpSecurityTools\\CsharpSecurityTools.csproj": {}
+    "D:\\TemporaryCode\\CsharpSecurityTools\\CsharpSecurityTools\\CsharpSecurityTools\\CsharpSecurityTools.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Endcat\\source\\repos\\CsharpSecurityTools\\CsharpSecurityTools\\CsharpSecurityTools.csproj": {
+    "D:\\TemporaryCode\\CsharpSecurityTools\\CsharpSecurityTools\\CsharpSecurityTools\\CsharpSecurityTools.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Endcat\\source\\repos\\CsharpSecurityTools\\CsharpSecurityTools\\CsharpSecurityTools.csproj",
+        "projectUniqueName": "D:\\TemporaryCode\\CsharpSecurityTools\\CsharpSecurityTools\\CsharpSecurityTools\\CsharpSecurityTools.csproj",
         "projectName": "CsharpSecurityTools",
-        "projectPath": "C:\\Users\\Endcat\\source\\repos\\CsharpSecurityTools\\CsharpSecurityTools\\CsharpSecurityTools.csproj",
+        "projectPath": "D:\\TemporaryCode\\CsharpSecurityTools\\CsharpSecurityTools\\CsharpSecurityTools\\CsharpSecurityTools.csproj",
         "packagesPath": "C:\\Users\\Endcat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Endcat\\source\\repos\\CsharpSecurityTools\\CsharpSecurityTools\\obj\\",
+        "outputPath": "D:\\TemporaryCode\\CsharpSecurityTools\\CsharpSecurityTools\\CsharpSecurityTools\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

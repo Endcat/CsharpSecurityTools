@@ -9,3 +9,14 @@ C:\Users\Endcat\source\repos\CsharpSecurityTools\CsharpSecurityTools\obj\Debug\n
 C:\Users\Endcat\source\repos\CsharpSecurityTools\CsharpSecurityTools\obj\Debug\netcoreapp2.2\CsharpSecurityTools.AssemblyInfo.cs
 C:\Users\Endcat\source\repos\CsharpSecurityTools\CsharpSecurityTools\obj\Debug\netcoreapp2.2\CsharpSecurityTools.dll
 C:\Users\Endcat\source\repos\CsharpSecurityTools\CsharpSecurityTools\obj\Debug\netcoreapp2.2\CsharpSecurityTools.pdb
+D:\TemporaryCode\CsharpSecurityTools\CsharpSecurityTools\CsharpSecurityTools\bin\Debug\netcoreapp2.2\CsharpSecurityTools.deps.json
+D:\TemporaryCode\CsharpSecurityTools\CsharpSecurityTools\CsharpSecurityTools\bin\Debug\netcoreapp2.2\CsharpSecurityTools.runtimeconfig.json
+D:\TemporaryCode\CsharpSecurityTools\CsharpSecurityTools\CsharpSecurityTools\bin\Debug\netcoreapp2.2\CsharpSecurityTools.runtimeconfig.dev.json
+D:\TemporaryCode\CsharpSecurityTools\CsharpSecurityTools\CsharpSecurityTools\bin\Debug\netcoreapp2.2\CsharpSecurityTools.dll
+D:\TemporaryCode\CsharpSecurityTools\CsharpSecurityTools\CsharpSecurityTools\bin\Debug\netcoreapp2.2\CsharpSecurityTools.pdb
+D:\TemporaryCode\CsharpSecurityTools\CsharpSecurityTools\CsharpSecurityTools\obj\Debug\netcoreapp2.2\CsharpSecurityTools.csprojAssemblyReference.cache
+D:\TemporaryCode\CsharpSecurityTools\CsharpSecurityTools\CsharpSecurityTools\obj\Debug\netcoreapp2.2\CsharpSecurityTools.csproj.CoreCompileInputs.cache
+D:\TemporaryCode\CsharpSecurityTools\CsharpSecurityTools\CsharpSecurityTools\obj\Debug\netcoreapp2.2\CsharpSecurityTools.AssemblyInfoInputs.cache
+D:\TemporaryCode\CsharpSecurityTools\CsharpSecurityTools\CsharpSecurityTools\obj\Debug\netcoreapp2.2\CsharpSecurityTools.AssemblyInfo.cs
+D:\TemporaryCode\CsharpSecurityTools\CsharpSecurityTools\CsharpSecurityTools\obj\Debug\netcoreapp2.2\CsharpSecurityTools.dll
+D:\TemporaryCode\CsharpSecurityTools\CsharpSecurityTools\CsharpSecurityTools\obj\Debug\netcoreapp2.2\CsharpSecurityTools.pdb
