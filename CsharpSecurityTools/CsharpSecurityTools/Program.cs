@@ -2,6 +2,9 @@
 using System.Runtime.InteropServices;
 using System.Net;
 using System.IO;
+using System.Text;
+using System.Net.Sockets;
+using System.Net;
 
 namespace CsharpSecurityTools
 {
@@ -47,6 +50,52 @@ namespace CsharpSecurityTools
 
                }
           }
+
+          static void PostParamFuzz(string[] args)
+          {
+               // get post request from burp
+               string[] requestLines = File.ReadAllLines(args[0]);
+               string[] parms = requestLines[requestLines.Length - 1].Split('&');
+               string host = string.Empty;
+               StringBuilder requestBuilder = new StringBuilder();
+
+               foreach (string ln in requestLines)
+               {
+                    if (ln.StartsWith("Host:"))
+                         host = ln.Split(' ')[1].Replace("\r", string.Empty); // delete \r in mono
+                    requestBuilder.Append(ln + "\n");
+               }
+
+               string request = requestBuilder.ToString() + "\r\n";
+               // request should be end with \r\n
+               //Console.WriteLine(request);
+               IPEndPoint rhost = new IPEndPoint(IPAddress.Parse(host), 80);
+               foreach (string parm in parms)
+               {
+                    using (Socket sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp))
+                    {
+                         sock.Connect(rhost);
+
+                         string val = parm.Split('=')[1];
+                         string req = request.Replace("=" + val, "=" + val + "'"); // pollution
+
+                         byte[] reqBytes = Encoding.ASCII.GetBytes(req);
+                         sock.Send(reqBytes);
+
+                         byte[] buf = new byte[sock.ReceiveBufferSize];
+
+                         sock.Receive(buf);
+                         string response = Encoding.ASCII.GetString(buf);
+                         if (response.Contains("error in yout SQL syntax"))
+                         {
+                              Console.WriteLine("Parameter "+parm+" seems vulunable");
+                              Console.Write(" to SQL injection with value: " + val + "'");
+                         }
+                    }
+               }
+               
+          }
+
           static void Main(string[] args)
           {
                // use cmd params to replace arguments string array
@@ -61,13 +110,15 @@ namespace CsharpSecurityTools
                }
                //Console.WriteLine("Hello World!");
 
+               //GetParamFuzz part start
                string[] arguments = new string[9];
                arguments[0] = "http://192.168.241.128/cgi-bin/badstore.cgi?searchquery=hello&action=search&x=0&y=0";
                GetParamFuzz(arguments);
+               //GetParamFuzz part end
 
           }
 
-          
+
      }
 }
 
