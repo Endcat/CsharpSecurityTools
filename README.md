@@ -17,3 +17,4 @@ For now, you can open the project in Visual Studio and check the program.cs to g
 - Post Parameters Fuzzing
 - Json Key-Value Fuzzing
 
+- SQL Injection Exploit Example (Badstore)

