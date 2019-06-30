@@ -18,4 +18,4 @@ For now, you can open the project in Visual Studio and check the program.cs to g
 - Json Key-Value Fuzzing
 - SQL Injection Exploit Example (Badstore)
 - Get rows of database
-
+- Get values of database
