@@ -1,0 +1,4 @@
+D:\TemporaryCode\CsharpSecurityTools\SOAPTerminalTest\SOAPTerminalTest\obj\Debug\netcoreapp2.2\SOAPTerminalTest.csprojAssemblyReference.cache
+D:\TemporaryCode\CsharpSecurityTools\SOAPTerminalTest\SOAPTerminalTest\obj\Debug\netcoreapp2.2\SOAPTerminalTest.csproj.CoreCompileInputs.cache
+D:\TemporaryCode\CsharpSecurityTools\SOAPTerminalTest\SOAPTerminalTest\obj\Debug\netcoreapp2.2\SOAPTerminalTest.AssemblyInfoInputs.cache
+D:\TemporaryCode\CsharpSecurityTools\SOAPTerminalTest\SOAPTerminalTest\obj\Debug\netcoreapp2.2\SOAPTerminalTest.AssemblyInfo.cs
