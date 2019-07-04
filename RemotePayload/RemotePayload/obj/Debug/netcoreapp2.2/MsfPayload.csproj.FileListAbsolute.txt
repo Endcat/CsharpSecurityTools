@@ -1,0 +1,11 @@
+D:\TemporaryCode\CsharpSecurityTools\MsfPayload\MsfPayload\bin\Debug\netcoreapp2.2\MsfPayload.deps.json
+D:\TemporaryCode\CsharpSecurityTools\MsfPayload\MsfPayload\bin\Debug\netcoreapp2.2\MsfPayload.runtimeconfig.json
+D:\TemporaryCode\CsharpSecurityTools\MsfPayload\MsfPayload\bin\Debug\netcoreapp2.2\MsfPayload.runtimeconfig.dev.json
+D:\TemporaryCode\CsharpSecurityTools\MsfPayload\MsfPayload\bin\Debug\netcoreapp2.2\MsfPayload.dll
+D:\TemporaryCode\CsharpSecurityTools\MsfPayload\MsfPayload\bin\Debug\netcoreapp2.2\MsfPayload.pdb
+D:\TemporaryCode\CsharpSecurityTools\MsfPayload\MsfPayload\obj\Debug\netcoreapp2.2\MsfPayload.csprojAssemblyReference.cache
+D:\TemporaryCode\CsharpSecurityTools\MsfPayload\MsfPayload\obj\Debug\netcoreapp2.2\MsfPayload.csproj.CoreCompileInputs.cache
+D:\TemporaryCode\CsharpSecurityTools\MsfPayload\MsfPayload\obj\Debug\netcoreapp2.2\MsfPayload.AssemblyInfoInputs.cache
+D:\TemporaryCode\CsharpSecurityTools\MsfPayload\MsfPayload\obj\Debug\netcoreapp2.2\MsfPayload.AssemblyInfo.cs
+D:\TemporaryCode\CsharpSecurityTools\MsfPayload\MsfPayload\obj\Debug\netcoreapp2.2\MsfPayload.dll
+D:\TemporaryCode\CsharpSecurityTools\MsfPayload\MsfPayload\obj\Debug\netcoreapp2.2\MsfPayload.pdb
