@@ -23,3 +23,4 @@ For now, you can open the project in Visual Studio and check the program.cs to g
 - Get values of database
 - SOAP Terminal Fuzzing (VM based on CsharpVulnSoap)
 - Remote Payload (netcat on Cygwin/Linux)
+- Net Payload (Tcp & Udp)

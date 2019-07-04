@@ -1,0 +1,11 @@
+D:\TemporaryCode\CsharpSecurityTools\TcpPayload\TcpPayload\bin\Debug\netcoreapp2.2\NetPayload.deps.json
+D:\TemporaryCode\CsharpSecurityTools\TcpPayload\TcpPayload\bin\Debug\netcoreapp2.2\NetPayload.runtimeconfig.json
+D:\TemporaryCode\CsharpSecurityTools\TcpPayload\TcpPayload\bin\Debug\netcoreapp2.2\NetPayload.runtimeconfig.dev.json
+D:\TemporaryCode\CsharpSecurityTools\TcpPayload\TcpPayload\bin\Debug\netcoreapp2.2\NetPayload.dll
+D:\TemporaryCode\CsharpSecurityTools\TcpPayload\TcpPayload\bin\Debug\netcoreapp2.2\NetPayload.pdb
+D:\TemporaryCode\CsharpSecurityTools\TcpPayload\TcpPayload\obj\Debug\netcoreapp2.2\TcpPayload.csprojAssemblyReference.cache
+D:\TemporaryCode\CsharpSecurityTools\TcpPayload\TcpPayload\obj\Debug\netcoreapp2.2\TcpPayload.csproj.CoreCompileInputs.cache
+D:\TemporaryCode\CsharpSecurityTools\TcpPayload\TcpPayload\obj\Debug\netcoreapp2.2\TcpPayload.AssemblyInfoInputs.cache
+D:\TemporaryCode\CsharpSecurityTools\TcpPayload\TcpPayload\obj\Debug\netcoreapp2.2\TcpPayload.AssemblyInfo.cs
+D:\TemporaryCode\CsharpSecurityTools\TcpPayload\TcpPayload\obj\Debug\netcoreapp2.2\NetPayload.dll
+D:\TemporaryCode\CsharpSecurityTools\TcpPayload\TcpPayload\obj\Debug\netcoreapp2.2\NetPayload.pdb

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetPayload", "TcpPayload\NetPayload.csproj", "{2E29EB2F-B134-49B3-9D10-E227AC5A3730}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E29EB2F-B134-49B3-9D10-E227AC5A3730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E29EB2F-B134-49B3-9D10-E227AC5A3730}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E29EB2F-B134-49B3-9D10-E227AC5A3730}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E29EB2F-B134-49B3-9D10-E227AC5A3730}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F2CA867B-1F4B-434F-933F-B26AA5849CC5}
+	EndGlobalSection
+EndGlobal
