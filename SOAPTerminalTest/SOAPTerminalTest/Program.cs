@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Xml;
+using System.Xml.Linq;
 using System.Net;
 using System.IO;
 
@@ -31,7 +32,70 @@ namespace SOAPTerminalTest
 
           static void FuzzSoapPort(SoapBinding binding)
           {
+               SoapPortType portType = _wsdl.PortTypes.Single(pt => pt.Name == binding.Type.Split(':')[1]);
 
+               foreach (SoapBindingOperation op in binding.Operations)
+               {
+                    Console.WriteLine("Fuzzing operation: "+op.Name);
+                    SoapOperation po = portType.Operations.Single(p => p.Name == op.Name);
+                    SoapMessage input = _wsdl.Messages.Single(m => m.Name == po.Input.Split(':')[1]);
+
+                    XNamespace soapNS = "http://schemas.xmlsoap.org/soap/envelope/";
+                    XNamespace xmlNS = op.SoapAction.Replace(op.Name, string.Empty);
+                    XElement soapBody = new XElement(soapNS + "Body");
+                    XElement soapOperation = new XElement(xmlNS + op.Name);
+
+                    soapBody.Add(soapOperation);
+
+                    List<Guid> paramList = new List<Guid>();
+                    SoapType type = _wsdl.Types.Single(t => t.Name == input.Parts[0].Element.Split(':')[1]);
+                    foreach (SoapTypeParameter param in type.Parameters)
+                    {
+                         XElement soapParam = new XElement(xmlNS + param.Name);
+                         if (param.Type.EndsWith("string"))
+                         {
+                              Guid guid = Guid.NewGuid();
+                              paramList.Add(guid);
+                              soapParam.SetValue(guid.ToString());
+                         }
+                         soapOperation.Add(soapParam);
+                    }
+
+                    XDocument soapDoc = new XDocument(new XDeclaration("1.0", "ascii", "true"), new XElement(soapNS + "Envelope", new XAttribute(XNamespace.Xmlns + "soap", soapNS), new XAttribute("xmlns", xmlNS), soapBody));
+
+                    int k = 0;
+                    foreach (Guid parm in paramList)
+                    {
+                         string testSoap = soapDoc.ToString().Replace(parm.ToString(), "fd'sa");
+                         byte[] data = System.Text.Encoding.ASCII.GetBytes(testSoap);
+                         HttpWebRequest req = (HttpWebRequest)WebRequest.Create(_endpoint);
+
+                         req.Headers["SOAPAction"] = op.SoapAction;
+                         req.Method = "POST";
+                         req.ContentType = "text/xml";
+                         req.ContentLength = data.Length;
+
+                         using (Stream stream = req.GetRequestStream())
+                              stream.Write(data, 0, data.Length);
+
+                         string resp = string.Empty;
+                         try
+                         {
+                              using (StreamReader rdr = new StreamReader(req.GetResponse().GetResponseStream()))
+                                   resp = rdr.ReadToEnd();
+                         }
+                         catch (WebException ex)
+                         {
+                              using (StreamReader rdr = new StreamReader(ex.Response.GetResponseStream()))
+                                   resp = rdr.ReadToEnd();
+
+                              if (resp.Contains("syntax error"))
+                                   Console.WriteLine("Possible SQL injection vector in parameter: ");
+                              Console.Write(type.Parameters[k].Name);
+                         }
+                         k++;
+                    }
+               }
           }
 
           static void FuzzService(SoapService service)
@@ -51,12 +115,115 @@ namespace SOAPTerminalTest
 
           static void FuzzHttpGetPort(SoapBinding binding)
           {
+               SoapPortType portType = _wsdl.PortTypes.Single(pt => pt.Name == binding.Type.Split(':')[1]);
+               foreach (SoapBindingOperation op in binding.Operations)
+               {
+                    Console.WriteLine("Fuzzing operation: "+op.Name);
+                    string url = _endpoint + op.Location;
+                    SoapOperation po = portType.Operations.Single(p => p.Name == op.Name);
+                    SoapMessage input = _wsdl.Messages.Single(m => m.Name == po.Input.Split(':')[1]);
+                    Dictionary<string, string> parameters = new Dictionary<string, string>();
 
+                    foreach (SoapMessagePart part in input.Parts)
+                         parameters.Add(part.Name, part.Type);
+
+                    bool first = true;
+                    List<Guid> guidList = new List<Guid>();
+                    foreach (var param in parameters)
+                    {
+                         if (param.Value.EndsWith("string"))
+                         {
+                              Guid guid = Guid.NewGuid();
+                              guidList.Add(guid);
+                              url += (first ? "?" : "&") + param.Key + "=" + guid.ToString();
+                         }
+                         first = false;
+                    }
+                    Console.WriteLine("Fuzzing full url: "+url);
+                    int k = 0;
+                    foreach (Guid guid in guidList)
+                    {
+                         string testUrl = url.Replace(guid.ToString(), "fd'sa");
+                         HttpWebRequest req = (HttpWebRequest)WebRequest.Create(testUrl);
+                         string resp = string.Empty;
+                         try
+                         {
+                              using (StreamReader rdr = new StreamReader(req.GetResponse().GetResponseStream()))
+                                   resp = rdr.ReadToEnd();
+                         }
+                         catch (WebException ex)
+                         {
+                              using (StreamReader rdr = new StreamReader(ex.Response.GetResponseStream()))
+                                   resp = rdr.ReadToEnd();
+                         
+                              if (resp.Contains("syntax error"))
+                                   Console.WriteLine("Possible SQL injection vector in parameter: "+input.Parts[k].Name);
+                         }
+                         k++;
+                    }
+               }
           }
 
           static void FuzzHttpPostPort(SoapBinding binding)
           {
+               SoapPortType portType = _wsdl.PortTypes.Single(pt => pt.Name == binding.Type.Split(':')[1]);
+               foreach (SoapBindingOperation op in binding.Operations)
+               {
+                    Console.WriteLine("Fuzzing Operation: "+op.Name);
+                    string url = _endpoint + op.Location;
+                    SoapOperation po = portType.Operations.Single(p => p.Name == op.Name);
+                    SoapMessage input = _wsdl.Messages.Single(m => m.Name == po.Input.Split(':')[1]);
+                    Dictionary<string, string> parameters = new Dictionary<string, string>();
 
+                    foreach (SoapMessagePart part in input.Parts)
+                         parameters.Add(part.Name, part.Type);
+
+                    string postParams = string.Empty;
+                    bool first = true;
+                    List<Guid> guids = new List<Guid>();
+                    foreach (var param in parameters)
+                    {
+                         if (param.Value.EndsWith("string"))
+                         {
+                              Guid guid = Guid.NewGuid();
+                              postParams += (first ? "" : "&") + param.Key + "=" + guid.ToString();
+                              guids.Add(guid);
+                         }
+                         if (first)
+                         {
+                              first = false;
+                         }
+                    }
+
+                    int k = 0;
+                    foreach (Guid guid in guids)
+                    {
+                         string testParams = postParams.Replace(guid.ToString(), "fd'sa");
+                         byte[] data = System.Text.Encoding.ASCII.GetBytes(testParams);
+
+                         HttpWebRequest req = (HttpWebRequest)WebRequest.Create(url);
+                         req.Method = "POST";
+                         req.ContentType = "application/x-www-form-urlencoded";
+                         req.ContentLength = data.Length;
+                         req.GetRequestStream().Write(data, 0, data.Length);
+
+                         string resp = string.Empty;
+                         try
+                         {
+                              using (StreamReader rdr = new StreamReader(req.GetResponse().GetResponseStream()))
+                                   resp = rdr.ReadToEnd();
+                         }
+                         catch (WebException ex)
+                         {
+                              using (StreamReader rdr = new StreamReader(ex.Response.GetResponseStream()))
+                                   resp = rdr.ReadToEnd();
+
+                              if (resp.Contains("syntax error"))
+                                   Console.WriteLine("Possible SQL injection vector in parameter: "+input.Parts[k].Name);
+                         }
+                         k++;
+                    }
+               }
           }
 
           static void FuzzHttpPort(SoapBinding binding)

@@ -4,6 +4,7 @@ Alternatives for Csharp_greyhat
 ### Dependencies
 
 - Newtonsoft.Json (12.0.2)
+- CsharpVulnSoap Virtual Machine （Download on Vulnhub.com）
 
 ### How-to-use
 
@@ -19,3 +20,4 @@ For now, you can open the project in Visual Studio and check the program.cs to g
 - SQL Injection Exploit Example (Badstore)
 - Get rows of database
 - Get values of database
+- SOAP Terminal Fuzzing (VM based on CsharpVulnSoap)
