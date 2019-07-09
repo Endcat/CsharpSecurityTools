@@ -24,3 +24,4 @@ For now, you can open the project in Visual Studio and check the program.cs to g
 - SOAP Terminal Fuzzing (VM based on CsharpVulnSoap)
 - Remote Payload (netcat on Cygwin/Linux)
 - Net Payload (Tcp & Udp)
+- Metasploit payload loader (Win/Linux)
