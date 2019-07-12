@@ -1,0 +1,8 @@
+D:\TemporaryCode\CsharpSecurityTools\NessusAutomatic\NessusAutomatic\bin\Debug\netcoreapp2.2\NessusAutomatic.deps.json
+D:\TemporaryCode\CsharpSecurityTools\NessusAutomatic\NessusAutomatic\bin\Debug\netcoreapp2.2\NessusAutomatic.runtimeconfig.json
+D:\TemporaryCode\CsharpSecurityTools\NessusAutomatic\NessusAutomatic\bin\Debug\netcoreapp2.2\NessusAutomatic.runtimeconfig.dev.json
+D:\TemporaryCode\CsharpSecurityTools\NessusAutomatic\NessusAutomatic\bin\Debug\netcoreapp2.2\NessusAutomatic.dll
+D:\TemporaryCode\CsharpSecurityTools\NessusAutomatic\NessusAutomatic\obj\Debug\netcoreapp2.2\NessusAutomatic.csprojAssemblyReference.cache
+D:\TemporaryCode\CsharpSecurityTools\NessusAutomatic\NessusAutomatic\obj\Debug\netcoreapp2.2\NessusAutomatic.csproj.CoreCompileInputs.cache
+D:\TemporaryCode\CsharpSecurityTools\NessusAutomatic\NessusAutomatic\obj\Debug\netcoreapp2.2\NessusAutomatic.AssemblyInfoInputs.cache
+D:\TemporaryCode\CsharpSecurityTools\NessusAutomatic\NessusAutomatic\obj\Debug\netcoreapp2.2\NessusAutomatic.AssemblyInfo.cs
