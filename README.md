@@ -6,6 +6,7 @@ Alternatives for Csharp_greyhat
 - Newtonsoft.Json (12.0.2)
 - CsharpVulnSoap Virtual Machine （Download on Vulnhub.com）
 - Cygwin (Simulating Port Listening)
+- Nexpose (Presented by Rapid7)
 
 ### How-to-use
 
@@ -25,3 +26,4 @@ For now, you can open the project in Visual Studio and check the program.cs to g
 - Remote Payload (netcat on Cygwin/Linux)
 - Net Payload (Tcp & Udp)
 - Metasploit payload loader (Win/Linux)
+- Nexpose Automator
