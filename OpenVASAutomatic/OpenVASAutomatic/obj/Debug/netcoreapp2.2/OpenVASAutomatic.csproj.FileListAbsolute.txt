@@ -1,0 +1,8 @@
+D:\TemporaryCode\CsharpSecurityTools\OpenVASAutomatic\OpenVASAutomatic\bin\Debug\netcoreapp2.2\OpenVASAutomatic.deps.json
+D:\TemporaryCode\CsharpSecurityTools\OpenVASAutomatic\OpenVASAutomatic\bin\Debug\netcoreapp2.2\OpenVASAutomatic.runtimeconfig.json
+D:\TemporaryCode\CsharpSecurityTools\OpenVASAutomatic\OpenVASAutomatic\bin\Debug\netcoreapp2.2\OpenVASAutomatic.runtimeconfig.dev.json
+D:\TemporaryCode\CsharpSecurityTools\OpenVASAutomatic\OpenVASAutomatic\bin\Debug\netcoreapp2.2\OpenVASAutomatic.dll
+D:\TemporaryCode\CsharpSecurityTools\OpenVASAutomatic\OpenVASAutomatic\obj\Debug\netcoreapp2.2\OpenVASAutomatic.csprojAssemblyReference.cache
+D:\TemporaryCode\CsharpSecurityTools\OpenVASAutomatic\OpenVASAutomatic\obj\Debug\netcoreapp2.2\OpenVASAutomatic.csproj.CoreCompileInputs.cache
+D:\TemporaryCode\CsharpSecurityTools\OpenVASAutomatic\OpenVASAutomatic\obj\Debug\netcoreapp2.2\OpenVASAutomatic.AssemblyInfoInputs.cache
+D:\TemporaryCode\CsharpSecurityTools\OpenVASAutomatic\OpenVASAutomatic\obj\Debug\netcoreapp2.2\OpenVASAutomatic.AssemblyInfo.cs

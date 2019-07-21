@@ -27,3 +27,4 @@ For now, you can open the project in Visual Studio and check the program.cs to g
 - Net Payload (Tcp & Udp)
 - Metasploit payload loader (Win/Linux)
 - Nexpose Automator
+- OpenVAS Automator
