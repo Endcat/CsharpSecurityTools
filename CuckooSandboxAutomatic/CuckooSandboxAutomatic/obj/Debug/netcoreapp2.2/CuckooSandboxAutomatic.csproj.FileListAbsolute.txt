@@ -1,0 +1,8 @@
+D:\TemporaryCode\CsharpSecurityTools\CuckooSandboxAutomatic\CuckooSandboxAutomatic\bin\Debug\netcoreapp2.2\CuckooSandboxAutomatic.deps.json
+D:\TemporaryCode\CsharpSecurityTools\CuckooSandboxAutomatic\CuckooSandboxAutomatic\bin\Debug\netcoreapp2.2\CuckooSandboxAutomatic.runtimeconfig.json
+D:\TemporaryCode\CsharpSecurityTools\CuckooSandboxAutomatic\CuckooSandboxAutomatic\bin\Debug\netcoreapp2.2\CuckooSandboxAutomatic.runtimeconfig.dev.json
+D:\TemporaryCode\CsharpSecurityTools\CuckooSandboxAutomatic\CuckooSandboxAutomatic\bin\Debug\netcoreapp2.2\CuckooSandboxAutomatic.dll
+D:\TemporaryCode\CsharpSecurityTools\CuckooSandboxAutomatic\CuckooSandboxAutomatic\obj\Debug\netcoreapp2.2\CuckooSandboxAutomatic.csprojAssemblyReference.cache
+D:\TemporaryCode\CsharpSecurityTools\CuckooSandboxAutomatic\CuckooSandboxAutomatic\obj\Debug\netcoreapp2.2\CuckooSandboxAutomatic.csproj.CoreCompileInputs.cache
+D:\TemporaryCode\CsharpSecurityTools\CuckooSandboxAutomatic\CuckooSandboxAutomatic\obj\Debug\netcoreapp2.2\CuckooSandboxAutomatic.AssemblyInfoInputs.cache
+D:\TemporaryCode\CsharpSecurityTools\CuckooSandboxAutomatic\CuckooSandboxAutomatic\obj\Debug\netcoreapp2.2\CuckooSandboxAutomatic.AssemblyInfo.cs

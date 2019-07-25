@@ -28,3 +28,4 @@ For now, you can open the project in Visual Studio and check the program.cs to g
 - Metasploit payload loader (Win/Linux)
 - Nexpose Automator
 - OpenVAS Automator
+- Cuckoo Sandbox Automator
