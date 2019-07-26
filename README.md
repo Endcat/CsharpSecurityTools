@@ -29,3 +29,5 @@ For now, you can open the project in Visual Studio and check the program.cs to g
 - Nexpose Automator
 - OpenVAS Automator
 - Cuckoo Sandbox Automator
+- Sqlmap Automator
+

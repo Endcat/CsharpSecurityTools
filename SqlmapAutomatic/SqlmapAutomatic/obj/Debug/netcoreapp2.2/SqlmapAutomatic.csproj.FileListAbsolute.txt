@@ -1,0 +1,8 @@
+D:\TemporaryCode\CsharpSecurityTools\SqlmapAutomatic\SqlmapAutomatic\bin\Debug\netcoreapp2.2\SqlmapAutomatic.deps.json
+D:\TemporaryCode\CsharpSecurityTools\SqlmapAutomatic\SqlmapAutomatic\bin\Debug\netcoreapp2.2\SqlmapAutomatic.runtimeconfig.json
+D:\TemporaryCode\CsharpSecurityTools\SqlmapAutomatic\SqlmapAutomatic\bin\Debug\netcoreapp2.2\SqlmapAutomatic.runtimeconfig.dev.json
+D:\TemporaryCode\CsharpSecurityTools\SqlmapAutomatic\SqlmapAutomatic\bin\Debug\netcoreapp2.2\SqlmapAutomatic.dll
+D:\TemporaryCode\CsharpSecurityTools\SqlmapAutomatic\SqlmapAutomatic\obj\Debug\netcoreapp2.2\SqlmapAutomatic.csprojAssemblyReference.cache
+D:\TemporaryCode\CsharpSecurityTools\SqlmapAutomatic\SqlmapAutomatic\obj\Debug\netcoreapp2.2\SqlmapAutomatic.csproj.CoreCompileInputs.cache
+D:\TemporaryCode\CsharpSecurityTools\SqlmapAutomatic\SqlmapAutomatic\obj\Debug\netcoreapp2.2\SqlmapAutomatic.AssemblyInfoInputs.cache
+D:\TemporaryCode\CsharpSecurityTools\SqlmapAutomatic\SqlmapAutomatic\obj\Debug\netcoreapp2.2\SqlmapAutomatic.AssemblyInfo.cs
