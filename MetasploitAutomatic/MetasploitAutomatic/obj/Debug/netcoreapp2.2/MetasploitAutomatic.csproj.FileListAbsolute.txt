@@ -1,0 +1,8 @@
+D:\TemporaryCode\CsharpSecurityTools\MetasploitAutomatic\MetasploitAutomatic\bin\Debug\netcoreapp2.2\MetasploitAutomatic.deps.json
+D:\TemporaryCode\CsharpSecurityTools\MetasploitAutomatic\MetasploitAutomatic\bin\Debug\netcoreapp2.2\MetasploitAutomatic.runtimeconfig.json
+D:\TemporaryCode\CsharpSecurityTools\MetasploitAutomatic\MetasploitAutomatic\bin\Debug\netcoreapp2.2\MetasploitAutomatic.runtimeconfig.dev.json
+D:\TemporaryCode\CsharpSecurityTools\MetasploitAutomatic\MetasploitAutomatic\bin\Debug\netcoreapp2.2\MetasploitAutomatic.dll
+D:\TemporaryCode\CsharpSecurityTools\MetasploitAutomatic\MetasploitAutomatic\obj\Debug\netcoreapp2.2\MetasploitAutomatic.csprojAssemblyReference.cache
+D:\TemporaryCode\CsharpSecurityTools\MetasploitAutomatic\MetasploitAutomatic\obj\Debug\netcoreapp2.2\MetasploitAutomatic.csproj.CoreCompileInputs.cache
+D:\TemporaryCode\CsharpSecurityTools\MetasploitAutomatic\MetasploitAutomatic\obj\Debug\netcoreapp2.2\MetasploitAutomatic.AssemblyInfoInputs.cache
+D:\TemporaryCode\CsharpSecurityTools\MetasploitAutomatic\MetasploitAutomatic\obj\Debug\netcoreapp2.2\MetasploitAutomatic.AssemblyInfo.cs
