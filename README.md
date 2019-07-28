@@ -4,6 +4,7 @@ Alternatives for Csharp_greyhat
 ### Dependencies
 
 - Newtonsoft.Json (12.0.2)
+- MsgPack.Cli
 - CsharpVulnSoap Virtual Machine （Download on Vulnhub.com）
 - Cygwin (Simulating Port Listening)
 - Nexpose (Presented by Rapid7)
@@ -31,4 +32,5 @@ For now, you can open the project in Visual Studio and check the program.cs to g
 - Cuckoo Sandbox Automator
 - Sqlmap Automator
 - ClamAV Automator
+- Metasploit Automator
 
