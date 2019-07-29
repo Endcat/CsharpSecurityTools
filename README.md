@@ -33,4 +33,5 @@ For now, you can open the project in Visual Studio and check the program.cs to g
 - Sqlmap Automator
 - ClamAV Automator
 - Metasploit Automator
+- Arachni Automator
 

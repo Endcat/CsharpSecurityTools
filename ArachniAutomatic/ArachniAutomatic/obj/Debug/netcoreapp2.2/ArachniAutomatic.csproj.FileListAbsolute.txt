@@ -1,0 +1,8 @@
+D:\TemporaryCode\CsharpSecurityTools\ArachniAutomatic\ArachniAutomatic\bin\Debug\netcoreapp2.2\ArachniAutomatic.deps.json
+D:\TemporaryCode\CsharpSecurityTools\ArachniAutomatic\ArachniAutomatic\bin\Debug\netcoreapp2.2\ArachniAutomatic.runtimeconfig.json
+D:\TemporaryCode\CsharpSecurityTools\ArachniAutomatic\ArachniAutomatic\bin\Debug\netcoreapp2.2\ArachniAutomatic.runtimeconfig.dev.json
+D:\TemporaryCode\CsharpSecurityTools\ArachniAutomatic\ArachniAutomatic\bin\Debug\netcoreapp2.2\ArachniAutomatic.dll
+D:\TemporaryCode\CsharpSecurityTools\ArachniAutomatic\ArachniAutomatic\obj\Debug\netcoreapp2.2\ArachniAutomatic.csprojAssemblyReference.cache
+D:\TemporaryCode\CsharpSecurityTools\ArachniAutomatic\ArachniAutomatic\obj\Debug\netcoreapp2.2\ArachniAutomatic.csproj.CoreCompileInputs.cache
+D:\TemporaryCode\CsharpSecurityTools\ArachniAutomatic\ArachniAutomatic\obj\Debug\netcoreapp2.2\ArachniAutomatic.AssemblyInfoInputs.cache
+D:\TemporaryCode\CsharpSecurityTools\ArachniAutomatic\ArachniAutomatic\obj\Debug\netcoreapp2.2\ArachniAutomatic.AssemblyInfo.cs

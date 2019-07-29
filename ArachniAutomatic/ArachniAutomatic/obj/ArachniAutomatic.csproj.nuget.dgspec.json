@@ -1,0 +1,72 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\TemporaryCode\\CsharpSecurityTools\\ArachniAutomatic\\ArachniAutomatic\\ArachniAutomatic.csproj": {}
+  },
+  "projects": {
+    "D:\\TemporaryCode\\CsharpSecurityTools\\ArachniAutomatic\\ArachniAutomatic\\ArachniAutomatic.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\TemporaryCode\\CsharpSecurityTools\\ArachniAutomatic\\ArachniAutomatic\\ArachniAutomatic.csproj",
+        "projectName": "ArachniAutomatic",
+        "projectPath": "D:\\TemporaryCode\\CsharpSecurityTools\\ArachniAutomatic\\ArachniAutomatic\\ArachniAutomatic.csproj",
+        "packagesPath": "C:\\Users\\Endcat\\.nuget\\packages\\",
+        "outputPath": "D:\\TemporaryCode\\CsharpSecurityTools\\ArachniAutomatic\\ArachniAutomatic\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Endcat\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "MsgPack.Cli": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.2, )"
+            },
+            "zlib.net": {
+              "target": "Package",
+              "version": "[1.0.4, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
