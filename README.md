@@ -11,9 +11,7 @@ Alternatives for Csharp_greyhat
 
 ### How-to-use
 
-yep, CsharpSecurityTools are under developing. Its author will release an executable program in the near future with well-designed user interface. Keep watching!!
-
-For now, you can open the project in Visual Studio and check the program.cs to get the detailed source code.
+you can open the project in Visual Studio and check the program.cs to get the detailed source code.
 
 ### Functions
 
